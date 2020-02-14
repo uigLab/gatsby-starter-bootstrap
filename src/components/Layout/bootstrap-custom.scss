@@ -1,0 +1,61 @@
+// Override default variables before the import
+
+$primary: #59B3E5;
+$secondary: #E6EB94;
+$info: #01516F;
+$dark: #2C2E3F;
+$body-color: $dark;
+$font-family-base: 'Muli', sans-serif;
+$headings-font-weight: 600;
+$enable-responsive-font-sizes: true;
+$border-color: rgba($dark, 0.115);
+$card-border-color: $border-color;
+$list-group-border-color: $border-color;
+$hr-border-color: $border-color;
+$dropdown-border-color: $border-color;
+$navbar-light-toggler-border-color: $border-color;
+$input-border-color: rgba($body-color, 0.25);
+$navbar-light-color: $body-color;
+$navbar-light-brand-color: $body-color;
+$navbar-light-hover-color: $primary;
+$navbar-light-active-color: $primary;
+$dropdown-link-color: $body-color;
+$dropdown-link-hover-color: $primary;
+$link-color: $body-color;
+$link-hover-color: $primary;
+$link-hover-decoration: none;
+$list-group-bg: transparent;
+// $btn-border-radius: 0;
+// $btn-border-radius-sm: 0;
+// $btn-border-radius-lg: 0;
+
+//Import font
+@import url("https://fonts.googleapis.com/css?family=Muli:400,600&display=swap");
+
+// Import Bootstrap and its default variables
+@import "~bootstrap/scss/bootstrap.scss";
+
+.has-offcanvas {
+  width: 100%;
+  height: 100%;
+  // overflow: hidden !important;
+}
+
+
+// Fix for flush list group
+.list-group-flush:first-child,
+.list-group-item:first-child {
+  border-top: 0;
+}
+
+// Fix for Gallery Lightbox (react-image package)
+.react-images__blanket,
+.react-images__positioner {
+  z-index: 999999 !important;
+}
+
+// Fix for Modal
+.modal,
+.modal-backdrop {
+  z-index: 99999 !important;
+}
