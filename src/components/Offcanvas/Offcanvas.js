@@ -52,8 +52,7 @@ const LogoContainer = styled.div`
 `;
 
 const Offcanvas = ({ show, onHideOffcanvas, ...rest }) => {
-
-  if(typeof document !== 'undefined'){
+  if (typeof document !== "undefined") {
     if (show) {
       document.querySelector("html").classList.add("has-offcanvas");
       document.body.classList.add("has-offcanvas");
@@ -63,7 +62,6 @@ const Offcanvas = ({ show, onHideOffcanvas, ...rest }) => {
     }
   }
 
-
   return (
     <div {...rest}>
       <Overlay className={show ? "" : "hidden"} onClick={onHideOffcanvas} />
@@ -71,7 +69,7 @@ const Offcanvas = ({ show, onHideOffcanvas, ...rest }) => {
         <Container>
           <div className="p-3">
             <LogoContainer className="my-3">
-              <Link to="/">
+              <Link to="/" onClick={onHideOffcanvas}>
                 <Logo />
               </Link>
             </LogoContainer>
